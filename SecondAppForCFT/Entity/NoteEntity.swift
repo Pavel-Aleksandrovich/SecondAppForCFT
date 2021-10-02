@@ -7,13 +7,13 @@
 
 import RealmSwift
 
-class Model: Object {
+class NoteEntity: Object {
     @objc dynamic var title: String?
-    @objc dynamic var textOfNote: String?
+    @objc dynamic var subTitle: String?
     
-    convenience  init(title: String?, textOfNote: String?) {
+    convenience init(title: String?, subTitle: String?) {
         self.init()
         self.title = title
-        self.textOfNote = textOfNote
+        self.subTitle = subTitle
     }
 }

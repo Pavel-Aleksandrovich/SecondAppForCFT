@@ -8,12 +8,13 @@
 import UIKit
 import RealmSwift
 
-class SecondTableViewController: UITableViewController {
+class NoteDetailsTableViewController: UITableViewController {
     
-    var currentNote: Model?
+    // Call in class ListOfNotesTableViewController
+    var currentNote: NoteEntity?
     
     @IBOutlet weak var titleTextField: UITextField!
-    @IBOutlet weak var descriptionTextView: UITextView!
+    @IBOutlet weak var subTitleTextView: UITextView!
     @IBOutlet weak var saveButton: UIBarButtonItem!
     
     override func viewDidLoad() {
@@ -21,45 +22,47 @@ class SecondTableViewController: UITableViewController {
         
         saveButton.isEnabled = false
         titleTextField.addTarget(self, action: #selector(enableSaveButton), for: .editingChanged)
-        editScreen()
-        //        saveNote()
+        setNoteDetails(currentNote)
     }
     
-    
+    // Call in class ListOfNotesTableViewController
     func saveNote() {
-        let newNote = Model(title: titleTextField.text!, textOfNote: descriptionTextView.text)
-        
+        let newNote = NoteEntity(title: titleTextField.text, subTitle: subTitleTextView.text)
         if currentNote != nil {
-            try! realm.write{
-                currentNote?.title = newNote.title
-                currentNote?.textOfNote = newNote.textOfNote
-            }
+            StorageManager.updateNote(currentNote!, newNote)
         } else {
             StorageManager.saveNote(newNote)
         }
-        
     }
     
     @IBAction func cancelActionBackScreen(_ sender: Any) {
         dismiss(animated: true)
     }
     
-    private func editScreen() {
-        if currentNote != nil {
-            editNavigationBar()
-            
-            titleTextField.text = currentNote?.title
-            descriptionTextView.text = currentNote?.textOfNote
+    private func setNoteDetails(_ note: NoteEntity?) {
+        if note == nil {
+            showNewNoteNavigationBar()
+        }else{
+            showEditNoteNavigationBar(note!)
         }
+        
+        titleTextField.text = note?.title ?? ""
+        subTitleTextView.text = note?.subTitle ?? "SubTitle"
     }
-    private func editNavigationBar() {
+    
+    private func showNewNoteNavigationBar(){
+        title = ""
+        saveButton.isEnabled = false
+    }
+    
+    private func showEditNoteNavigationBar(_ note: NoteEntity) {
         navigationItem.leftBarButtonItem = nil
-        title = currentNote?.title
+        title = note.title
         saveButton.isEnabled = true
     }
 }
 
-extension SecondTableViewController: UITextFieldDelegate {
+extension NoteDetailsTableViewController: UITextFieldDelegate {
     
     @objc private func enableSaveButton(){
         if titleTextField.text?.isEmpty == true {
@@ -68,6 +71,4 @@ extension SecondTableViewController: UITextFieldDelegate {
             saveButton.isEnabled = true
         }
     }
-    
-    
 }

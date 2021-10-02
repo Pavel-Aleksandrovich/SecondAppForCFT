@@ -12,11 +12,11 @@
 		8450A2C7270594AA00E00C90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8450A2C5270594AA00E00C90 /* Main.storyboard */; };
 		8450A2C9270594AC00E00C90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8450A2C8270594AC00E00C90 /* Assets.xcassets */; };
 		8450A2CC270594AC00E00C90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8450A2CA270594AC00E00C90 /* LaunchScreen.storyboard */; };
-		8450A2D4270594EC00E00C90 /* FirstTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450A2D3270594EC00E00C90 /* FirstTableViewController.swift */; };
-		8450A2D62705959200E00C90 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450A2D52705959200E00C90 /* Model.swift */; };
-		8450A2D82705BAA700E00C90 /* SecondTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450A2D72705BAA700E00C90 /* SecondTableViewController.swift */; };
+		8450A2D4270594EC00E00C90 /* ListOfNotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450A2D3270594EC00E00C90 /* ListOfNotesTableViewController.swift */; };
+		8450A2D62705959200E00C90 /* NoteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450A2D52705959200E00C90 /* NoteEntity.swift */; };
+		8450A2D82705BAA700E00C90 /* NoteDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450A2D72705BAA700E00C90 /* NoteDetailsTableViewController.swift */; };
 		8450A2DA2705CA8500E00C90 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450A2D92705CA8500E00C90 /* StorageManager.swift */; };
-		8450A2DC2705CBBA00E00C90 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450A2DB2705CBBA00E00C90 /* CustomTableViewCell.swift */; };
+		8450A2DC2705CBBA00E00C90 /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450A2DB2705CBBA00E00C90 /* NoteCell.swift */; };
 		F5018E5069C079620AE61AC1 /* Pods_SecondAppForCFT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C58D448F07029F22E89ABEEC /* Pods_SecondAppForCFT.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,11 +30,11 @@
 		8450A2C8270594AC00E00C90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8450A2CB270594AC00E00C90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8450A2CD270594AC00E00C90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8450A2D3270594EC00E00C90 /* FirstTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTableViewController.swift; sourceTree = "<group>"; };
-		8450A2D52705959200E00C90 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
-		8450A2D72705BAA700E00C90 /* SecondTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTableViewController.swift; sourceTree = "<group>"; };
+		8450A2D3270594EC00E00C90 /* ListOfNotesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfNotesTableViewController.swift; sourceTree = "<group>"; };
+		8450A2D52705959200E00C90 /* NoteEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteEntity.swift; sourceTree = "<group>"; };
+		8450A2D72705BAA700E00C90 /* NoteDetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailsTableViewController.swift; sourceTree = "<group>"; };
 		8450A2D92705CA8500E00C90 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
-		8450A2DB2705CBBA00E00C90 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		8450A2DB2705CBBA00E00C90 /* NoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
 		C58D448F07029F22E89ABEEC /* Pods_SecondAppForCFT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SecondAppForCFT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -80,19 +80,51 @@
 		8450A2BE270594AA00E00C90 /* SecondAppForCFT */ = {
 			isa = PBXGroup;
 			children = (
+				8450A30127085F8400E00C90 /* NoteDetails */,
+				8450A30027085D9100E00C90 /* ListOfNotes */,
+				8450A2FE27085BB500E00C90 /* Data */,
+				8450A2FD27085B5800E00C90 /* Entity */,
 				8450A2BF270594AA00E00C90 /* AppDelegate.swift */,
 				8450A2C1270594AA00E00C90 /* SceneDelegate.swift */,
-				8450A2D52705959200E00C90 /* Model.swift */,
-				8450A2D92705CA8500E00C90 /* StorageManager.swift */,
-				8450A2D3270594EC00E00C90 /* FirstTableViewController.swift */,
-				8450A2D72705BAA700E00C90 /* SecondTableViewController.swift */,
-				8450A2DB2705CBBA00E00C90 /* CustomTableViewCell.swift */,
 				8450A2C5270594AA00E00C90 /* Main.storyboard */,
 				8450A2C8270594AC00E00C90 /* Assets.xcassets */,
 				8450A2CA270594AC00E00C90 /* LaunchScreen.storyboard */,
 				8450A2CD270594AC00E00C90 /* Info.plist */,
 			);
 			path = SecondAppForCFT;
+			sourceTree = "<group>";
+		};
+		8450A2FD27085B5800E00C90 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				8450A2D52705959200E00C90 /* NoteEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		8450A2FE27085BB500E00C90 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				8450A2D92705CA8500E00C90 /* StorageManager.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		8450A30027085D9100E00C90 /* ListOfNotes */ = {
+			isa = PBXGroup;
+			children = (
+				8450A2D3270594EC00E00C90 /* ListOfNotesTableViewController.swift */,
+				8450A2DB2705CBBA00E00C90 /* NoteCell.swift */,
+			);
+			path = ListOfNotes;
+			sourceTree = "<group>";
+		};
+		8450A30127085F8400E00C90 /* NoteDetails */ = {
+			isa = PBXGroup;
+			children = (
+				8450A2D72705BAA700E00C90 /* NoteDetailsTableViewController.swift */,
+			);
+			path = NoteDetails;
 			sourceTree = "<group>";
 		};
 		D98FA15951FC4B4061D38A05 /* Frameworks */ = {
@@ -219,11 +251,11 @@
 			files = (
 				8450A2C0270594AA00E00C90 /* AppDelegate.swift in Sources */,
 				8450A2C2270594AA00E00C90 /* SceneDelegate.swift in Sources */,
-				8450A2D82705BAA700E00C90 /* SecondTableViewController.swift in Sources */,
-				8450A2DC2705CBBA00E00C90 /* CustomTableViewCell.swift in Sources */,
+				8450A2D82705BAA700E00C90 /* NoteDetailsTableViewController.swift in Sources */,
+				8450A2DC2705CBBA00E00C90 /* NoteCell.swift in Sources */,
 				8450A2DA2705CA8500E00C90 /* StorageManager.swift in Sources */,
-				8450A2D4270594EC00E00C90 /* FirstTableViewController.swift in Sources */,
-				8450A2D62705959200E00C90 /* Model.swift in Sources */,
+				8450A2D4270594EC00E00C90 /* ListOfNotesTableViewController.swift in Sources */,
+				8450A2D62705959200E00C90 /* NoteEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

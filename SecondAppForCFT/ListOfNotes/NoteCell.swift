@@ -7,9 +7,7 @@
 
 import UIKit
 
-class CustomTableViewCell: UITableViewCell {
+class NoteCell: UITableViewCell {
 
- 
-    @IBOutlet weak var titleFirstScreen: UILabel!
-    
+    @IBOutlet weak var title: UILabel!
 }

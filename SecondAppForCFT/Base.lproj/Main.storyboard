@@ -10,13 +10,13 @@
         <!--My Notes-->
         <scene sceneID="jIx-Eb-7rg">
             <objects>
-                <tableViewController id="jyq-5M-xnp" customClass="FirstTableViewController" customModule="SecondAppForCFT" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="jyq-5M-xnp" customClass="ListOfNotesTableViewController" customModule="SecondAppForCFT" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="DsY-ua-400">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="50" id="Rxd-mf-AjQ" customClass="CustomTableViewCell" customModule="SecondAppForCFT" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="50" id="Rxd-mf-AjQ" customClass="NoteCell" customModule="SecondAppForCFT" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="24.5" width="414" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Rxd-mf-AjQ" id="QHl-6B-Ifm">
@@ -38,7 +38,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="titleFirstScreen" destination="xsg-bi-nlK" id="HLD-C7-zIj"/>
+                                    <outlet property="title" destination="xsg-bi-nlK" id="HLD-C7-zIj"/>
                                     <segue destination="lhb-y8-v8T" kind="show" identifier="editSegue" id="6XQ-zf-ebH"/>
                                 </connections>
                             </tableViewCell>
@@ -63,7 +63,7 @@
         <!--Add a new Note-->
         <scene sceneID="EPg-td-Idb">
             <objects>
-                <tableViewController id="lhb-y8-v8T" customClass="SecondTableViewController" customModule="SecondAppForCFT" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="lhb-y8-v8T" customClass="NoteDetailsTableViewController" customModule="SecondAppForCFT" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="HfC-U8-liz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -136,8 +136,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="descriptionTextView" destination="Csb-zA-uo3" id="Ltb-nG-2u1"/>
                         <outlet property="saveButton" destination="gZC-8n-zB8" id="zVL-kY-X5O"/>
+                        <outlet property="subTitleTextView" destination="Csb-zA-uo3" id="Ltb-nG-2u1"/>
                         <outlet property="titleTextField" destination="Dye-Oi-sUP" id="rpV-bn-03O"/>
                     </connections>
                 </tableViewController>

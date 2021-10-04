@@ -80,16 +80,12 @@
 		8450A2BE270594AA00E00C90 /* SecondAppForCFT */ = {
 			isa = PBXGroup;
 			children = (
+				8450A306270AF47500E00C90 /* Resources */,
+				8450A305270AF3F400E00C90 /* Application */,
 				8450A30127085F8400E00C90 /* NoteDetails */,
 				8450A30027085D9100E00C90 /* ListOfNotes */,
 				8450A2FE27085BB500E00C90 /* Data */,
 				8450A2FD27085B5800E00C90 /* Entity */,
-				8450A2BF270594AA00E00C90 /* AppDelegate.swift */,
-				8450A2C1270594AA00E00C90 /* SceneDelegate.swift */,
-				8450A2C5270594AA00E00C90 /* Main.storyboard */,
-				8450A2C8270594AC00E00C90 /* Assets.xcassets */,
-				8450A2CA270594AC00E00C90 /* LaunchScreen.storyboard */,
-				8450A2CD270594AC00E00C90 /* Info.plist */,
 			);
 			path = SecondAppForCFT;
 			sourceTree = "<group>";
@@ -113,6 +109,7 @@
 		8450A30027085D9100E00C90 /* ListOfNotes */ = {
 			isa = PBXGroup;
 			children = (
+				8450A2C5270594AA00E00C90 /* Main.storyboard */,
 				8450A2D3270594EC00E00C90 /* ListOfNotesTableViewController.swift */,
 				8450A2DB2705CBBA00E00C90 /* NoteCell.swift */,
 			);
@@ -125,6 +122,25 @@
 				8450A2D72705BAA700E00C90 /* NoteDetailsTableViewController.swift */,
 			);
 			path = NoteDetails;
+			sourceTree = "<group>";
+		};
+		8450A305270AF3F400E00C90 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				8450A2C1270594AA00E00C90 /* SceneDelegate.swift */,
+				8450A2BF270594AA00E00C90 /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		8450A306270AF47500E00C90 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8450A2CD270594AC00E00C90 /* Info.plist */,
+				8450A2CA270594AC00E00C90 /* LaunchScreen.storyboard */,
+				8450A2C8270594AC00E00C90 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		D98FA15951FC4B4061D38A05 /* Frameworks */ = {
@@ -163,6 +179,9 @@
 		8450A2B4270594AA00E00C90 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					New,
+				);
 				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
@@ -405,7 +424,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PZRD3MXDYZ;
-				INFOPLIST_FILE = SecondAppForCFT/Info.plist;
+				INFOPLIST_FILE = SecondAppForCFT/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -425,7 +444,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PZRD3MXDYZ;
-				INFOPLIST_FILE = SecondAppForCFT/Info.plist;
+				INFOPLIST_FILE = SecondAppForCFT/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

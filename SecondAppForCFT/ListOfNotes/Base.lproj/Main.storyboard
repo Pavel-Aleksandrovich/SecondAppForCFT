@@ -169,6 +169,7 @@
         <scene sceneID="D5h-G8-MD3">
             <objects>
                 <navigationController id="dML-pf-lH2" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="lPG-JZ-t3V"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Hwy-2X-Zm3">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

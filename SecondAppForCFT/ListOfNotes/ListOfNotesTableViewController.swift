@@ -10,6 +10,12 @@ import RealmSwift
 
 class ListOfNotesTableViewController: UITableViewController {
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        animateTableView()
+    }
+    
     private var notes: Results<NoteEntity> = StorageManager.getNotes()
     
     // MARK: - Table view data source
@@ -48,6 +54,21 @@ class ListOfNotesTableViewController: UITableViewController {
             let note = notes[indexPath.row]
             StorageManager.deleteNote(note)
             tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
+    }
+    // Creating an animation
+    private func animateTableView() {
+        tableView.reloadData()
+        
+        let cells = tableView.visibleCells
+        let tableViewHeight = tableView.bounds.height
+        var delay: Double = 0
+        
+        for cell in cells {
+            cell.transform = CGAffineTransform(translationX: tableViewHeight, y: 0)
+            
+            UIView.animate(withDuration: 1.7, delay: delay*0.07, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {cell.transform = CGAffineTransform.identity})
+            delay += 1
         }
     }
 }
